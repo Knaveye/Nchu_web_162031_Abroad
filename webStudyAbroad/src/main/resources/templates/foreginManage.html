@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>国外管理 </title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+   
+
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index" class="site_title"><i class="fa fa-paw"></i> <span>首页</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+               <a href="login.html"><span>未登录</span></a>
+                <h2>游客</h2>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+         <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+               
+                <ul class="nav side-menu">
+                  <li><a href="index"><i class="fa fa-home"></i> 首页 </a>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> 出国留学  <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                       <li><a href="declarationGuide">申报指南</a></li>
+                     <li><a href="admission">录取派出</a></li>
+                      <li><a href="foreginManage">国外管理</a></li>
+                      <li><a href="manageRule">管理规定</a></li>
+                      <li><a href="cooperative">合作机构</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-desktop"></i> 新闻资讯 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="news">新闻</a></li>
+                      <li><a href="announcement">公告</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-table"></i> 关于我们 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="introduction">机构介绍</a></li>
+                      <li><a href="institutionSet">机构设置</a></li>
+                      <li><a href="contact">联系方式</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="/logout">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation  用户登录后才有的模块-->
+        <!-- 
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">John Doe
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+         -->
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>国外管理页面</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"><h3>国外管理</h3></div>
+                  </div>
+                  <div class="x_content" style="color: black;font-size: 16px;">
+                   <div class="container" style="width: 100%;">
+                    	<div class="col-md-6">
+                    	    <ul style="margin: 0;padding: 0;">
+                    	       <li><a>关于为2018年冬季学期、2019年夏季学期赴德国慕尼黑地区国家公派留学人</a></li>
+                    	       <li><a>关于为新录取的赴德国慕尼黑国家公派留学人员提供学生公寓的通知</a></li>
+                    	       <li><a>关于为2016年冬季学期与2017年夏季学期赴德国慕尼黑国家公派留学人员提</a></li>
+                    	       <li><a>办理事项及流程</a></li>
+                    	       <li><a>常见问题解答</a></li>
+                    	    </ul>
+                    	</div>
+                    	<div class="col-md-6"  style="border: 2px solid;border-color: rgb(229,234,238);">
+                    	     <h3 style="color: rgb(81,115,141);">驻外使领馆教育处组</h3>
+                    		 <div role="tabpanel" data-example-id="togglable-tabs">
+		                      <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+		                        <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">亚洲</a>
+		                        </li>
+		                        <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">欧洲</a>
+		                        </li>
+		                        <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">非洲</a>
+		                        </li>
+		                        <li role="presentation" class=""><a href="#tab_content4" role="tab" id="profile-tab3" data-toggle="tab" aria-expanded="false">美洲</a>
+		                        </li>
+		                        <li role="presentation" class=""><a href="#tab_content5" role="tab" id="profile-tab4" data-toggle="tab" aria-expanded="false">大洋洲</a>
+		                        </li>
+		                      </ul>
+		                      <div id="myTabContent" class="tab-content">
+		                        <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
+		                          <ul>
+		                            <li><a href="http://www.jiaoyuchu.org/" >驻日本使馆教育处</a></li>
+		                            <li><a href="http://www.chinaedukr.org/" >驻韩国使馆教育处</a></li>
+		                            <li><a href="http://www.edusg.org.cn/" >驻新加坡使馆教育处</a></li>
+		                            <li><a href="http://sapporo.china-consulate.org/chn/jylx/">驻札幌领馆教育组</a></li>
+		                            <li><a href="http://www.eduosaka.org/" >驻大阪领馆教育组</a></li>
+		                            <li><a href="http://niigata.china-consulate.org/chn/jywh/">驻新潟领馆教育组</a></li>
+		                            <li><a href="http://www.edufukuoka.org/">驻福冈领馆教育组</a></li>
+		                          </ul>
+		                        </div>
+		                        <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
+		                           <ul>
+		                            <li><a href="http://www.education-ambchine.org/">驻法国使馆教育处</a></li>
+		                            <li><a href="http://www.de-moe.edu.cn/" >驻德国使馆教育处</a></li>
+		                            <li><a href="http://www.edu-chineseembassy-uk.org/">驻英国使馆教育处</a></li>
+		                            <li><a href="http://www.eduru.org/" >驻俄罗斯使馆教育处</a></li>
+		                            <li><a href="http://educhina.pl/" >驻波兰使馆教育处</a></li>
+		                            <li><a href="http://www.chinaembassy.dk/" >驻丹麦使馆教育处</a></li>
+		                            <li><a href="http://www.educn-fi.org/" >驻芬兰使馆教育处</a></li>
+		                          </ul>
+		                        </div>
+		                        <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
+		                          <ul>
+		                            <li><a href="http://et.china-embassy.org/chn/">驻埃塞俄比亚使馆文化处</a></li>
+		                            <li><a href="http://www.egchinaedu.org">驻埃及使馆教育组</a></li>
+		                            <li><a href="http://za.china-embassy.org/chn/zngxss/jyjl/">驻南非使馆教育组</a></li>
+		                            
+		                          </ul>
+		                        </div>
+		                         <div role="tabpanel" class="tab-pane fade" id="tab_content4" aria-labelledby="profile-tab">
+		                          <ul>
+		                            <li><a href="http://www.sino-education.org/">驻美国使馆教育处</a></li>
+		                            <li><a href="http://www.eduembca.org/publish/portal55/">驻加拿大使馆教育处</a></li>
+		                            <li><a href="http://www.educhicago.org/">驻芝加哥领馆教育组</a></li>
+		                            <li><a href="http://houston.china-consulate.org/chn/jy/">驻休斯顿领馆教育组</a></li>
+		                            <li><a href="http://www.edulosangeles.org/" >驻洛杉矶领馆教育组</a></li>
+		                            <li><a href="http://www.edunewyork.org/#userconsent#">驻纽约领馆教育组</a></li>
+		                            <li><a href="http://www.edusf.org/publish/portal108/tab5049/">驻旧金山领馆教育组</a></li>
+		                          </ul>
+		                        </div>
+		                         <div role="tabpanel" class="tab-pane fade" id="tab_content5" aria-labelledby="profile-tab">
+		                          <ul>
+		                            <li><a href="http://www.edu-australia.org" >驻澳大利亚使馆教育处</a></li>
+		                            <li><a href="http://www.chinanz-education.org/" >驻新西兰使馆教育处</a></li>
+		                            <li><a href="http://www.edusyd.org/">驻悉尼领馆教育组</a></li>
+		                            <li><a href="http://www.aucklandmoe.org">驻奥克兰领馆教育组</a></li>
+		                            <li><a href="http://www.edumel.org/">驻墨尔本总领事馆教育组</a></li>
+		                            <li><a href="http://www.edubrisbane.org/">驻布里斯班总领事馆教育组</a></li>
+		                            
+		                          </ul>
+		                        </div>
+		                      </div>
+		                    </div>
+                    	</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content 
+        <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+     -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="vendors/nprogress/nprogress.js"></script>
+     <!-- bootstrap-progressbar -->
+    <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="vendors/iCheck/icheck.min.js"></script>
+    <!-- PNotify -->
+    <script src="vendors/pnotify/dist/pnotify.js"></script>
+    <script src="vendors/pnotify/dist/pnotify.buttons.js"></script>
+    <script src="vendors/pnotify/dist/pnotify.nonblock.js"></script>
+    
+    <!-- Custom Theme Scripts -->
+    <script src="build/js/custom.min.js"></script>
+  </body>
+</html>

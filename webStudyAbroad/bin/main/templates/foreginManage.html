@@ -10,19 +10,19 @@
     <title>国外管理 </title>
 
     <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- bootstrap-progressbar -->
-    <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
    
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="/build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -74,13 +74,7 @@
                       <li><a href="announcement">公告</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-table"></i> 关于我们 <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="introduction">机构介绍</a></li>
-                      <li><a href="institutionSet">机构设置</a></li>
-                      <li><a href="contact">联系方式</a></li>
-                    </ul>
-                  </li>
+
                 </ul>
               </div>
             </div>
@@ -252,11 +246,7 @@
                    <div class="container" style="width: 100%;">
                     	<div class="col-md-6">
                     	    <ul style="margin: 0;padding: 0;">
-                    	       <li><a>关于为2018年冬季学期、2019年夏季学期赴德国慕尼黑地区国家公派留学人</a></li>
-                    	       <li><a>关于为新录取的赴德国慕尼黑国家公派留学人员提供学生公寓的通知</a></li>
-                    	       <li><a>关于为2016年冬季学期与2017年夏季学期赴德国慕尼黑国家公派留学人员提</a></li>
-                    	       <li><a>办理事项及流程</a></li>
-                    	       <li><a>常见问题解答</a></li>
+                    	        <a  th:each="rule:${foreignrulelist}" th:href="@{'/ruleDetail?ruleid='+${rule.id}}"> <li th:text="${rule.title}"></li></a>
                     	    </ul>
                     	</div>
                     	<div class="col-md-6"  style="border: 2px solid;border-color: rgb(229,234,238);">
@@ -351,23 +341,23 @@
     </div>
 
     <!-- jQuery -->
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <script src="/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
+    <script src="/vendors/nprogress/nprogress.js"></script>
      <!-- bootstrap-progressbar -->
-    <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
-    <script src="vendors/iCheck/icheck.min.js"></script>
+    <script src="/vendors/iCheck/icheck.min.js"></script>
     <!-- PNotify -->
-    <script src="vendors/pnotify/dist/pnotify.js"></script>
-    <script src="vendors/pnotify/dist/pnotify.buttons.js"></script>
-    <script src="vendors/pnotify/dist/pnotify.nonblock.js"></script>
+    <script src="/vendors/pnotify/dist/pnotify.js"></script>
+    <script src="/vendors/pnotify/dist/pnotify.buttons.js"></script>
+    <script src="/vendors/pnotify/dist/pnotify.nonblock.js"></script>
     
     <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
+    <script src="/build/js/custom.min.js"></script>
   </body>
 </html>

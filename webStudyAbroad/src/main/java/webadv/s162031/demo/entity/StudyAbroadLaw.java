@@ -7,7 +7,7 @@ import java.util.Date;
  * @author: yjp
  * @date:
  * @description:
- * 留学法规
+ * 鐣欏娉曡
  */
 @Entity
 @Table(name = "studylaw")
@@ -15,7 +15,7 @@ public class StudyAbroadLaw {
 
     private long id;
 
-    private User user;
+
 
     private String content;
 
@@ -28,8 +28,9 @@ public class StudyAbroadLaw {
 
     private String fileath;
 
+    private WebManage webManage;
     /**
-     * 留学法规id
+     * 鐣欏娉曡id
      * @return
      */
     @Id
@@ -44,13 +45,13 @@ public class StudyAbroadLaw {
     }
 
     /**
-     * 外键，用户表id
+     * 澶栭敭锛岀敤鎴疯〃id
      * @return
      */
 
 
     /**
-     * 留学法规内容
+     * 鐣欏娉曡鍐呭
      * @return
      */
     @Column(name = "sra_content")
@@ -63,7 +64,7 @@ public class StudyAbroadLaw {
     }
 
     /**
-     * 发布时间
+     * 鍙戝竷鏃堕棿
      * @return
      */
     @Temporal(TemporalType.TIMESTAMP)
@@ -77,7 +78,7 @@ public class StudyAbroadLaw {
     }
 
     /**
-     * 标题
+     * 鏍囬
      * @return
      */
     @Column(name = "sra_title")
@@ -90,7 +91,7 @@ public class StudyAbroadLaw {
     }
 
     /**
-     * 附件名称
+     * 闄勪欢鍚嶇О
      * @return
      */
     @Column(name = "sra_filename")
@@ -103,7 +104,7 @@ public class StudyAbroadLaw {
     }
 
     /**
-     * 附件路径
+     * 闄勪欢璺緞
      * @return
      */
     @Column(name = "sra_filepath")
@@ -115,13 +116,15 @@ public class StudyAbroadLaw {
         this.fileath = fileath;
     }
 
+
+
     @ManyToOne
-    @JoinColumn(name = "userid")
-    public User getUser() {
-        return user;
+    @JoinColumn(name = "webmanageid")
+    public WebManage getWebManage() {
+        return webManage;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setWebManage(WebManage webManage) {
+        this.webManage = webManage;
     }
 }

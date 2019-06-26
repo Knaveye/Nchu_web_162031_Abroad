@@ -18,6 +18,8 @@ public class WebManage {
 
     private String password;
 
+    private String name;
+
     /**
      * 网站管理员id，自增长
      * @return
@@ -57,5 +59,19 @@ public class WebManage {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * 管理员姓名
+     * @return
+     */
+    @Column(name = "webname")
+    public String getName() {
+
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

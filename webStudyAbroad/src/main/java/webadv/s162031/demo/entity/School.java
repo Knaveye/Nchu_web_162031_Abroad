@@ -6,7 +6,7 @@ import javax.persistence.*;
  * @author: yjp
  * @date:
  * @description:
- * 学校   4
+ * 瀛︽牎   4
  */
 @Entity
 public class School {
@@ -14,10 +14,10 @@ public class School {
 
     private String school_net;
 
-    private String school_name;
+    private String name;
 
     /**
-     * 学校id ，自增长
+     * 瀛︽牎id 锛岃嚜澧為暱
      * @return
      */
     @Id
@@ -32,7 +32,7 @@ public class School {
     }
 
     /**
-     * 学校链接
+     * 瀛︽牎閾炬帴
      * @return
      */
     @Column(name = "schoolnet")
@@ -45,17 +45,60 @@ public class School {
     }
 
     /**
-     * 学校名字
+     * 瀛︽牎鍚嶅瓧
      * @return
      */
     @Column(name = "schoolname")
-    public String getSchool_name() {
-        return school_name;
+    public String getName() {
+        return name;
     }
 
-    public void setSchool_name(String school_name) {
-        this.school_name = school_name;
+    public void setName(String name) {
+        this.name = name;
+    }
+    private String sCountry;
+    private String sType;
+    private String sEnlishName;
+    private String sAddress;
+    private String sTitle;
+
+    public String getsCountry() {
+        return sCountry;
     }
 
+    public void setsCountry(String sCountry) {
+        this.sCountry = sCountry;
+    }
 
+    public String getsType() {
+        return sType;
+    }
+
+    public void setsType(String sType) {
+        this.sType = sType;
+    }
+
+    public String getsEnlishName() {
+        return sEnlishName;
+    }
+
+    public void setsEnlishName(String sEnlishName) {
+        this.sEnlishName = sEnlishName;
+    }
+
+    public String getsAddress() {
+        return sAddress;
+    }
+
+    public void setsAddress(String sAddress) {
+        this.sAddress = sAddress;
+    }
+
+    public String getsTitle() {
+        return sTitle;
+    }
+
+    public void setsTitle(String sTitle) {
+        this.sTitle = sTitle;
+    }
 }

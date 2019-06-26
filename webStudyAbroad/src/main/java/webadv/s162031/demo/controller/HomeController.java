@@ -1,67 +1,56 @@
 package webadv.s162031.demo.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 @Controller
 public class HomeController {
-	
-	@GetMapping("/")
-	public String index() {
-		return "login";
+
+	@GetMapping("/detail")
+	public String todetail() {
+		return "detail";
 	}
-	 @GetMapping("/news")
-	    public String tonews(){
-	    	return "news";
-	    }
-	    
-	    @GetMapping("/index")
-	    public String toindex(){
-	    	return "index";
-	    }
-	    @GetMapping("/newslist")
-	    public String tonewslist(){
-	    	return "newslist";
-	    }
-	    
-	    @GetMapping("/announcement")
-	    public String toannouncement(){
-	    	return "announcement";
-	    }
-	    @GetMapping("/annDeatils")
-	    public String toannDeatils(){
-	    	return "annDeatils";
-	    }
-	    @GetMapping("/declarationGuide")
-	    public String todeclarationGuide(){
-	    	return "declarationGuide";
-	    }
-	    @GetMapping("/admission")
-	    public String toadmission(){
-	    	return "admission";
-	    }
-	    @GetMapping("/foreginManage")
-	    public String toforeginManage(){
-	    	return "foreginManage";
-	    }
-	    @GetMapping("/cooperative")
-	    public String tocooperative(){//ºÏ×÷»ú¹¹
-	    	return "cooperative";
-	    }
-	    @GetMapping("/manageRule")
-	    public String tomanageRule(){//¹ÜÀí¹æ¶¨
-	    	return "manageRule";
-	    }
-	    @GetMapping("/contact")
-	    public String tocontact(){//ÁªÏµ·½Ê½
-	    	return "contact";
-	    }
-	    @GetMapping("/institutionSet")
-	    public String toinstitutionSet(){//»ú¹¹ÉèÖÃ
-	    	return "institutionSet";
-	    }
-	    @GetMapping("/introduction")
-	    public String tointroduction(){//»ú¹¹½éÉÜ
-	    	return "introduction";
-	    }
+	/*
+	 * ä¸‹è½½æ‰€æœ‰æ˜ç»†æ–‡ä»¶
+	 *
+	 * */
+
+	@GetMapping("/downloadDetail")
+	public void downloadFile(Model model, HttpServletRequest request, HttpServletResponse response, String path, String name) throws IOException {
+		File imageFile = new File(path);
+		if (!imageFile.exists()) {
+			return;
+		}
+
+		//ä¸‹è½½çš„æ–‡ä»¶æºå¸¦è¿™ä¸ªåç§°
+		response.setHeader("Content-Disposition", "attachment;filename=" + name);
+		//æ–‡ä»¶ä¸‹è½½ç±»å‹--äºŒè¿›åˆ¶æ–‡ä»¶
+		response.setContentType("application/octet-stream");
+
+		try {
+			FileInputStream fis = new FileInputStream(path);
+			byte[] content = new byte[fis.available()];
+			fis.read(content);
+			fis.close();
+
+			ServletOutputStream sos = response.getOutputStream();
+			sos.write(content);
+
+			sos.flush();
+			sos.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+
 }

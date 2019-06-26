@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -10,14 +10,14 @@
     <title>首页 </title>
 
     <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="/build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -37,7 +37,7 @@
                 <img src="images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-               <a href="login.html"><span>未登录</span></a>
+               <a href="/"><span>未登录</span></a>
                 <h2>游客</h2>
               </div>
               <div class="clearfix"></div>
@@ -69,13 +69,17 @@
                       <li><a href="announcement">公告</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-table"></i> 关于我们 <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-home"></i>留学申请 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="introduction">机构介绍</a></li>
-                      <li><a href="institutionSet">机构设置</a></li>
-                      <li><a href="contact">联系方式</a></li>
+                      <li><a href="/schoolprofile">学校概况</a></li>
+                      <li><a href="/abroadapplication">留学申请</a></li>
+                      <li><a href="/findownapply">申请查看</a></li>
                     </ul>
                   </li>
+                  <li class=""><a th:href="@{/post/index}"><i class="fa fa-table"></i>论坛交流</a>
+
+                  </li>
+
                 </ul>
               </div>
             </div>
@@ -270,7 +274,7 @@
                                                                                     还有一种比较特殊一些的，是中介和国内的大学联合办理的留学，这个需要在国内读一段时间，再去国外读一段时间，常见的有1+3。</p>
                        </li>
                        
-                        <li><h5>1.公派留学</h5>
+                        <li><h5>2.公派留学</h5>
                          <p>需要你在考上国内的大学之后成绩优异，学校才会以交流生的名义送你出国，同时国外的大学也会有人来你们学校，但学费是学校出的，
                                                                                     你自己只需要出一部分的生活费，当然公费留学的名额很少，只有成绩很优秀的人才有机会得到。</p>
                        </li>
@@ -295,15 +299,15 @@
     </div>
 
     <!-- jQuery -->
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <script src="/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
+    <script src="/vendors/nprogress/nprogress.js"></script>
     
     <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
+    <script src="/build/js/custom.min.js"></script>
   </body>
 </html>

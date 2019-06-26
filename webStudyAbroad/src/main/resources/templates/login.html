@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -23,83 +23,112 @@
     <link href="/css/custom.min.css" rel="stylesheet">
   </head>
 
-<body class="login">
-    <div>
-      <a class="hiddenanchor" id="signup"></a>
-      <a class="hiddenanchor" id="signin"></a>
+  <body class="login">
+  <div>
+  <!--  <a class="hiddenanchor" id="signup"></a>-->
+   <!-- <a class="hiddenanchor" id="signin"></a>-->
 
-      <div class="login_wrapper">
-        <div class="animate form login_form">
-          <section class="login_content">
-            <form>
-              <h1>登录页面</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="用户名" required="">
+    <div class="login_wrapper">
+      <div class="animate form login_form">
+        <section class="login_content">
+          <form>
+            <h1>登录页面</h1>
+            <h2 class="error-news" style="color: red"></h2>
+            <div>
+              <input type="text" class="form-control login-account" placeholder="账号" required="required">
+              <span id="account-span"></span>
+            </div>
+            <div>
+              <input type="password" class="form-control login-password" placeholder="密码" required="required" >
+              <span id="password-span"></span>
+            </div>
+            <div>
+              <div class="radio-inline">
+                <input type="radio" name="killOrder" value="0" checked="checked">
+                <label>用户</label>
               </div>
-              <div>
-                <input type="password" class="form-control" placeholder="密码" required="">
+              <div class="radio-inline">
+                <input type="radio" name="killOrder" value="1">
+                <label>学校管理员</label>
               </div>
-              <div>
-                <a class="btn btn-default submit" href="/index">登录</a>
-                <a class="reset_pass" href="#">忘记密码？</a>
+
+              <div class="radio-inline">
+                <input type="radio" name="killOrder" value="2" >
+                <label>网站管理员</label>
               </div>
+            </div>
+            <div>
+              <a class="btn btn-default submit login-sub" href="">登录</a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="separator">
+              <p class="change_link">没有账号？<a th:href="@{'/register'}" class="to_register">创建账号</a>
+              </p>
 
               <div class="clearfix"></div>
+              <br>
 
-              <div class="separator">
-                <p class="change_link">没有账号？<a href="#signup" class="to_register">创建账号</a>
-                </p>
-
-                <div class="clearfix"></div>
-                <br>
-
-                <div>
-                  <h1><i class="fa fa-paw"></i>中国留学网</h1>
-<p>2019 中国留学网！让您快人一步，如愿以偿！</p>
-                  
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
-
-        <div id="register" class="animate form registration_form">
-          <section class="login_content">
-            <form>
-              <h1>注册页面</h1>
               <div>
-                <input type="text" class="form-control" placeholder="用户名" required="">
-              </div>
-              <div>
-                <input type="email" class="form-control" placeholder="Email" required="">
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="密码" required="">
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="index">提交</a>
-              </div>
+                <h1><i class="fa fa-paw"></i>中国留学网</h1>
+                <p>2019 中国留学网！让您快人一步，如愿以偿！</p>
 
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <p class="change_link">已经有账号？<a href="#signin" class="to_register">登录页面</a>
-                </p>
-
-                <div class="clearfix"></div>
-                <br>
-
-                <div>
-                  <h1><i class="fa fa-paw"></i>中国留学网</h1>
-                  <p>2019 中国留学网！让您快人一步，如愿以偿！</p>
-                </div>
               </div>
-            </form>
-          </section>
-        </div>
+            </div>
+          </form>
+        </section>
       </div>
-    </div>
-  
 
-</body>
+<!--      <div id="register" class="animate form registration_form">
+        <section class="login_content">
+          <form>
+            <h1>注册页面</h1>
+            <div>
+              <input type="text" class="form-control" placeholder="用户名" required="">
+            </div>
+
+            <div>
+              <input type="" class="form-control" placeholder="账号" required="">
+            </div>
+            <div>
+              <input type="email" class="form-control" placeholder="密码" required="">
+            </div>
+            <div>
+              <input type="email" class="form-control" placeholder="Email" >
+            </div><div>
+            <input type="email" class="form-control" placeholder="护照号">
+          </div>
+            <div>
+              <input type="password" class="form-control" placeholder="出生年月" required="">
+            </div>
+            <div>
+              <a class="btn btn-default submit" href="index">提交</a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="separator">
+              <p class="change_link">已经有账号？<a href="#signin" class="to_register">登录页面</a>
+              </p>
+
+              <div class="clearfix"></div>
+              <br>
+
+              <div>
+                <h1><i class="fa fa-paw"></i>中国留学网</h1>
+                <p>2019 中国留学网！让您快人一步，如愿以偿！</p>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>-->
+    </div>
+  </div>
+  <script src="/vendors/jquery/dist/jquery.min.js"></script>
+  <script src="/js/login.js"></script>
+
+
+
+  </body>
 </html>

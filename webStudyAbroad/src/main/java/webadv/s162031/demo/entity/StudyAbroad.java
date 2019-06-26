@@ -7,14 +7,13 @@ import java.util.Date;
  * @author: yjp
  * @date:
  * @description:
- * ÁôÑ§¶¯Ì¬
+ * ç•™å­¦åŠ¨æ€
  */
 @Entity
 @Table(name = "studyAbroad")
 public class StudyAbroad {
     private long id;
 
-    private User user;
 
     private Date time;
 
@@ -22,8 +21,10 @@ public class StudyAbroad {
 
     private String content;
 
+    private Schoolmanage  schoolmanage;
+
     /**
-     * ÁôÑ§¶¯Ì¬id£¬×ÔÔö³¤
+     * ç•™å­¦åŠ¨æ€idï¼Œè‡ªå¢é•¿
      * @return
      */
     @Id
@@ -37,22 +38,9 @@ public class StudyAbroad {
         this.id = id;
     }
 
-    /**
-     * ÓÃ»§±íÖ÷¼ü
-     * @return
-     */
-    @ManyToOne
-    @JoinColumn(name = "userId")
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     /**
-     * ·¢²¼Ê±¼ä
+     * å‘å¸ƒæ—¶é—´
      * @return
      */
     @Column(name = "sa_time")
@@ -66,7 +54,7 @@ public class StudyAbroad {
     }
 
     /**
-     * ·¢²¼±êÌâ
+     * å‘å¸ƒæ ‡é¢˜
      * @return
      */
     @Column(name = "sa_title")
@@ -79,7 +67,7 @@ public class StudyAbroad {
     }
 
     /**
-     * ·¢²¼ÄÚÈİ
+     * å‘å¸ƒå†…å®¹
      * @return
      */
     @Column(name = "sa_content")
@@ -90,4 +78,17 @@ public class StudyAbroad {
     public void setContent(String content) {
         this.content = content;
     }
+    @ManyToOne
+    @JoinColumn(name = "schmanageid")
+    public Schoolmanage getSchoolmanage() {
+        return schoolmanage;
+    }
+
+    public void setSchoolmanage(Schoolmanage schoolmanage) {
+        this.schoolmanage = schoolmanage;
+    }
+
+
+
 }
+ 

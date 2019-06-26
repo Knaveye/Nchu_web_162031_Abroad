@@ -7,22 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>国外管理 </title>
+    <title>管理规定 </title>
 
     <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- bootstrap-progressbar -->
-    <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
    
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="/build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -74,13 +74,7 @@
                       <li><a href="announcement">公告</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-table"></i> 关于我们 <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="introduction">机构介绍</a></li>
-                      <li><a href="institutionSet">机构设置</a></li>
-                      <li><a href="contact">联系方式</a></li>
-                    </ul>
-                  </li>
+
                 </ul>
               </div>
             </div>
@@ -209,7 +203,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>国外管理页面</h3>
+                <h3>管理规定页面</h3>
               </div>
 
               <div class="title_right">
@@ -246,17 +240,13 @@
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
                     </ul>
-                    <div class="clearfix"><h3>国外管理</h3></div>
+                    <div class="clearfix"><h3>管理规定</h3></div>
                   </div>
                   <div class="x_content" style="color: black;font-size: 16px;">
                    <div class="container" style="width: 100%;">
                     	<div class="col-md-6">
                     	    <ul style="margin: 0;padding: 0;">
-                    	       <li><a>《资助出国留学协议书》签约、公正办法</a></li>
-                    	       <li><a>国家建设高水平大学公派研究生项目学费资助办法(试行)</a></li>
-                    	       <li><a>国家留学基金资助人员派出和管理若干问题的规定(1996年)</a></li>
-                    	       <li><a>教育部 财政部关于印发《国家公派出国留学研究生管理规定(试行)》的通知</a></li>
-                    	       <li><a>常见问题解答</a></li>
+                    	      <a  th:each="rule:${rulelist}" th:href="@{'/ruleDetail?ruleid='+${rule.id}}"> <li th:text="${rule.title}"></li></a>
                     	    </ul>
                     	</div>
                     	<div class="col-md-6"  style="border: 2px solid;border-color: rgb(229,234,238);padding: 0;">
@@ -265,8 +255,8 @@
                     	  </div>
                     	  <div style="width: 100%;background-color:rgb(235,245,254);text-align: center;height: 300px; ">
                     	   
-                    	     <a><button class="btn btn-round btn-primary" type="button" style="width: 80%;">在线阅读</button></a>
-                    	      <a><button class="btn btn-round btn-primary" type="button" style="width: 80%;">在线下载</button></a>
+                    	     <a><button class="btn btn-round btn-primary" type="button" style="width: 80%;" onclick="window.location.href='/txt/ruleOnline.pdf'">在线阅读</button></a>
+                    	      <a><button class="btn btn-round btn-primary" type="button" style="width: 80%;" onclick="window.location.href='/rule/downloadFile'">在线下载</button></a>
                     	 	
                     	  </div>
                     	</div>
@@ -291,23 +281,23 @@
     </div>
 
     <!-- jQuery -->
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <script src="/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
+    <script src="/vendors/nprogress/nprogress.js"></script>
      <!-- bootstrap-progressbar -->
-    <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
-    <script src="vendors/iCheck/icheck.min.js"></script>
+    <script src="/vendors/iCheck/icheck.min.js"></script>
     <!-- PNotify -->
-    <script src="vendors/pnotify/dist/pnotify.js"></script>
-    <script src="vendors/pnotify/dist/pnotify.buttons.js"></script>
-    <script src="vendors/pnotify/dist/pnotify.nonblock.js"></script>
+    <script src="/vendors/pnotify/dist/pnotify.js"></script>
+    <script src="/vendors/pnotify/dist/pnotify.buttons.js"></script>
+    <script src="/vendors/pnotify/dist/pnotify.nonblock.js"></script>
     
     <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
+    <script src="/build/js/custom.min.js"></script>
   </body>
 </html>

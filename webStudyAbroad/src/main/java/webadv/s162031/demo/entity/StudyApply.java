@@ -6,7 +6,7 @@ import javax.persistence.*;
  * @author: yjp
  * @date:
  * @description:
- * ÁôÑ§ÉêÇë
+ * ç•™å­¦ç”³è¯·è¡¨
  */
 @Entity
 @Table(name = "apply")
@@ -20,10 +20,11 @@ public class StudyApply {
     private String context;
 
     private String describe;
-/**
- * ÁôÑ§ÉêÇëid
- * @return
- */
+
+    /**
+     * ä¸»é”®è‡ªå¢é•¿
+     * @return
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "applyid")
@@ -34,11 +35,12 @@ public class StudyApply {
     public void setId(long id) {
         this.id = id;
     }
+
     /**
-     *Ñ§Ğ£Ö÷¼ü
+     * å­¦æ ¡id
      * @return
      */
-@ManyToOne
+    @ManyToOne
 @JoinColumn(name = "schoolid")
     public School getSchool() {
         return school;
@@ -47,10 +49,7 @@ public class StudyApply {
     public void setSchool(School school) {
         this.school = school;
     }
-/**
- * ÓÃ»§Ö÷¼ü
- * @return
- */
+
     @ManyToOne
     @JoinColumn(name = "userid")
     public User getUser() {
@@ -60,10 +59,7 @@ public class StudyApply {
     public void setUser(User user) {
         this.user = user;
     }
-/**
- * ÉêÇëÈËÉÏ´«²ÄÁÏ
- * @return
- */
+
     @Column(name = "apply_context")
     public String getContext() {
         return context;
@@ -72,10 +68,6 @@ public class StudyApply {
     public void setContext(String context) {
         this.context = context;
     }
-   /**
-    * ÉêÇëÈËÌõ¼şÃèÊö 
-    * @return
-    */
 @Column(name = "apply_describe")
     public String getDescribe() {
         return describe;

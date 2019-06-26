@@ -7,7 +7,7 @@ import java.util.Date;
  * @author: yjp
  * @date:
  * @description:
- * Ìû×ÓµÄ»Ø¸´±í
+ * å¸–å­çš„å›å¤è¡¨
  */
 @Entity
 public class Postreply {
@@ -23,8 +23,12 @@ public class Postreply {
 
     private long  floornum;
 
+    private  Schoolmanage schoolmanage;
+
+    private  WebManage webManage;
+
     /**
-     * Ìû×Ó»Ø¸´
+     * å¸–å­å›å¤
      * @return
      */
     @Id
@@ -39,10 +43,10 @@ public class Postreply {
     }
 
     /**
-     * Ìû×Ó±íÖ÷¼ü£¬
+     * å¸–å­è¡¨ä¸»é”®ï¼Œ
      * @return
      */
-    @ManyToOne
+    @ManyToOne(targetEntity = Post.class)
     @JoinColumn(name = "postid")
     public Post getPost() {
         return post;
@@ -53,10 +57,10 @@ public class Postreply {
     }
 
     /**
-     * user±íÖ÷¼ü
+     * userè¡¨ä¸»é”®
      * @return
      */
-    @ManyToOne
+    @ManyToOne(targetEntity = User.class)
     @JoinColumn(name = "userid")
     public User getUser() {
         return user;
@@ -67,7 +71,7 @@ public class Postreply {
     }
 
     /**
-     * »Ø¸´Ê±¼ä
+     * å›å¤æ—¶é—´
      * @return
      */
     @Column(name = "replayTime")
@@ -81,7 +85,7 @@ public class Postreply {
     }
 
     /**
-     * »Ø¸´ÄÚÈİ
+     * å›å¤å†…å®¹
      * @return
      */
     @Column(name = "replaycontent")
@@ -94,7 +98,7 @@ public class Postreply {
     }
 
     /**
-     * Â¥²ã
+     * æ¥¼å±‚
      * @return
      */
     @Column(name = "floornum")
@@ -104,5 +108,33 @@ public class Postreply {
 
     public void setFloornum(long floornum) {
         this.floornum = floornum;
+    }
+
+    /**
+     * å­¦æ ¡ç®¡ç†å‘˜è¡¨ä¸»é”®
+     * @return
+     */
+    @ManyToOne(targetEntity = Schoolmanage.class)
+    @JoinColumn(name = "schmasg_id")
+    public Schoolmanage getSchoolmanage() {
+        return schoolmanage;
+    }
+
+    public void setSchoolmanage(Schoolmanage schoolmanage) {
+        this.schoolmanage = schoolmanage;
+    }
+
+    /**
+     * ç®¡ç†å‘˜è¡¨ä¸»é”®
+     * @return
+     */
+    @ManyToOne(targetEntity = WebManage.class)
+    @JoinColumn(name = "webMsg_id")
+    public WebManage getWebManage() {
+        return webManage;
+    }
+
+    public void setWebManage(WebManage webManage) {
+        this.webManage = webManage;
     }
 }

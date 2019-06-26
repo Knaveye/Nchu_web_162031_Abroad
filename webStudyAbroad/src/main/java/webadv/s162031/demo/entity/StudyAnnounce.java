@@ -7,14 +7,13 @@ import java.util.Date;
  * @author: yjp
  * @date:
  * @description:
- * ÁôÑ§¹«¸æ
+ * ç•™å­¦å…¬å‘Š
  */
 @Entity
-@Table(name = "stuayAnnounce")
+@Table(name = "studyAnnounce")
 public class StudyAnnounce {
     private long id;
 
-    private User user;
 
     private String content;
 
@@ -26,8 +25,10 @@ public class StudyAnnounce {
 
     private  String filepath;
 
+    private Schoolmanage schoolmanage;
+
     /**
-     * ÁôÑ§¹«¸æÖ÷¼ü£¬×ÔÔö³¤
+     * ç•™å­¦å…¬å‘Šä¸»é”®ï¼Œè‡ªå¢é•¿
      * @return
      */
     @Id
@@ -41,22 +42,9 @@ public class StudyAnnounce {
         this.id = id;
     }
 
-    /**
-     * ÓÃ»§±íÖ÷¼ü
-     * @return
-     */
-    @ManyToOne
-    @JoinColumn(name = "userid")
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     /**
-     * ¹«¸æÄÚÈİ
+     * å…¬å‘Šå†…å®¹
      * @return
      */
     @Column(name = "ann_content")
@@ -69,7 +57,7 @@ public class StudyAnnounce {
     }
 
     /**
-     * ·¢²¼Ê±¼ä
+     * å‘å¸ƒæ—¶é—´
      * @return
      */
     @Column(name = "ann_time")
@@ -83,7 +71,7 @@ public class StudyAnnounce {
     }
 
     /**
-     * ¹«¸æ±êÌâ
+     * å…¬å‘Šæ ‡é¢˜
      * @return
      */
     @Column(name = "ann_title")
@@ -96,7 +84,7 @@ public class StudyAnnounce {
     }
 
     /**
-     * ¹«¸æ¸½¼şÃû×Ö
+     * å…¬å‘Šé™„ä»¶åå­—
      * @return
      */
     @Column(name = "ann_filename")
@@ -109,7 +97,7 @@ public class StudyAnnounce {
     }
 
     /**
-     * ¹«¸æ¸½¼şÂ·¾¶
+     * å…¬å‘Šé™„ä»¶è·¯å¾„
      * @return
      */
     @Column(name = "ann_filepath")
@@ -120,4 +108,19 @@ public class StudyAnnounce {
     public void setFilepath(String filepath) {
         this.filepath = filepath;
     }
+    /**
+     * ç”¨æˆ·è¡¨ä¸»é”®
+     * @return
+     */
+    @ManyToOne
+    @JoinColumn(name = "schmanageid")
+    public Schoolmanage getSchoolmanage() {
+        return schoolmanage;
+    }
+
+    public void setSchoolmanage(Schoolmanage schoolmanage) {
+        this.schoolmanage = schoolmanage;
+    }
+
+
 }

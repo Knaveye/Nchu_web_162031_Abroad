@@ -6,7 +6,7 @@ import javax.persistence.*;
  * @author: yjp
  * @date:
  * @description:
- * Ñ§Ğ£¹ÜÀíÔ±
+ * å­¦æ ¡ç®¡ç†å‘˜
  */
 @Entity
 @Table(name = "schoolmanage")
@@ -18,8 +18,10 @@ public class Schoolmanage {
 
     private String passward;
 
+    private String name;
+
     /**
-     * Ñ§Ğ£¹ÜÀíÔ±id£¬×ÔÔö³¤
+     * å­¦æ ¡ç®¡ç†å‘˜idï¼Œè‡ªå¢é•¿
      *
      * @return
      */
@@ -35,7 +37,7 @@ public class Schoolmanage {
     }
 
     /**
-     * Ñ§Ğ£¹ÜÀíÔ±ÕËºÅ
+     * å­¦æ ¡ç®¡ç†å‘˜è´¦å·
      * @return
      */
     @Column(name = "schmanageAccount")
@@ -48,7 +50,7 @@ public class Schoolmanage {
     }
 
     /**
-     * Ñ§Ğ£¹ÜÀíÔ±ÃÜÂë
+     * å­¦æ ¡ç®¡ç†å‘˜å¯†ç 
      * @return
      */
     @Column(name = "schmanagePassword")
@@ -61,10 +63,10 @@ public class Schoolmanage {
     }
 
     /**
-     * ¹ÜÀíÔ±ËùÊôÑ§Ğ£
+     * ç®¡ç†å‘˜æ‰€å±å­¦æ ¡
      * @return
      */
-    @ManyToOne
+    @ManyToOne(targetEntity = School.class)
 @JoinColumn(name = "schoolId")
     public School getSchool() {
         return school;
@@ -75,4 +77,18 @@ public class Schoolmanage {
     }
 
     private School school;
+
+    /**
+     * å­¦æ ¡ç®¡ç†å‘˜åå­—
+     * @return
+     */
+    @Column(name = "schmanage_name")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
+

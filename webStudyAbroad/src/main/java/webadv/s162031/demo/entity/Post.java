@@ -7,7 +7,7 @@ import java.util.Date;
  * @author: yjp
  * @date:
  * @description:
- * Ìû×Ó
+ * å¸–å­
  */
 @Entity
 @Table(name = "post")
@@ -22,12 +22,12 @@ public class Post {
 
     private long viewcount;
 
-
+    private String postcontext;
 
     private Date postdate;
 
     /**
-     * Ìû×Ó±íµÄÖ÷æIpostid
+     * å¸–å­è¡¨çš„ä¸»éµpostid
      * @return
      */
     @Id
@@ -42,10 +42,10 @@ public class Post {
     }
 
     /**
-     * ·¢ÌûÈËid£¬user±íÍâ¼ü
+     * å‘å¸–äººidï¼Œuserè¡¨å¤–é”®
      * @param
      */
-    @ManyToOne
+    @ManyToOne(targetEntity = User.class)
     @JoinColumn(name = "userid")
     public User getUser() {
         return user;
@@ -56,7 +56,7 @@ public class Post {
     }
 
     /**
-     * Ìû×ÓÃû³Æ
+     * å¸–å­åç§°
      * @return
      */
     @Column(name = "postname")
@@ -70,7 +70,7 @@ public class Post {
 
 
     /**
-     * Ìû×Óä¯ÀÀ´ÎÊı
+     * å¸–å­æµè§ˆæ¬¡æ•°
      * @return
      */
     public long getViewcount() {
@@ -82,15 +82,27 @@ public class Post {
     }
 
     /**
-     * ·¢ÌûÈÕÆÚ
+     * å‘å¸–æ—¥æœŸ
      * @return
      */
-    @Temporal(TemporalType.TIME)
+    @Temporal(TemporalType.TIMESTAMP)
     public Date getPostdate() {
         return postdate;
     }
 
     public void setPostdate(Date postdate) {
         this.postdate = postdate;
+    }
+
+    /**
+     * å¸–å­è¯¢é—®å†…å®¹
+     * @return
+     */
+    public String getPostcontext() {
+        return postcontext;
+    }
+
+    public void setPostcontext(String postcontext) {
+        this.postcontext = postcontext;
     }
 }

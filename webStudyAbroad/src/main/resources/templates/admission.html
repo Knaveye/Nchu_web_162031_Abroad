@@ -10,14 +10,14 @@
     <title>录取派出</title>
 
     <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="/build/css/custom.min.css" rel="stylesheet">
     <style type="text/css">
       .form-group{
       	border: 1px,solid;
@@ -61,14 +61,14 @@
            <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-               
+
                 <ul class="nav side-menu">
                   <li><a href="index"><i class="fa fa-home"></i> 首页 </a>
                   </li>
                   <li><a><i class="fa fa-edit"></i> 出国留学  <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                       <li><a href="declarationGuide">申报指南</a></li>
-                     <li><a href="admission">录取派出</a></li>
+                      <li><a href="declarationGuide">申报指南</a></li>
+                      <li><a href="admission">录取派出</a></li>
                       <li><a href="foreginManage">国外管理</a></li>
                       <li><a href="manageRule">管理规定</a></li>
                       <li><a href="cooperative">合作机构</a></li>
@@ -80,13 +80,7 @@
                       <li><a href="announcement">公告</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-table"></i> 关于我们 <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="introduction">机构介绍</a></li>
-                      <li><a href="institutionSet">机构设置</a></li>
-                      <li><a href="contact">联系方式</a></li>
-                    </ul>
-                  </li>
+
                 </ul>
               </div>
             </div>
@@ -318,22 +312,9 @@
 	                   </div>
 	                   <div class="col-md-8">
 	                    <ul style="width: 100%;">
-	                      <li>
-	                      <a href="#">2019年度与以色列高等教育委员会合作奖学金遴选工作启动通知</a>
-	                        <span>2019-06-05</span>
-	                      </li>
-	                      <li>
-	                      <a href="#">关于做好2019年全国学校体育教师赴美留学项目遴选工作的通知</a>
-	                        <span>2019-05-23</span>
-	                      </li>
-	                      <li>
-	                      <a href="#">赴乌克兰专业人才培养计划遴选通知</a>
-	                        <span>2019-05-23</span>
-	                      </li>
-	                      <li>
-	                      <a href="#">2019/2020年度与意大利互换奖学金遴选工作启动</a>
-	                        <span>2019-05-22</span>
-	                      </li>
+	                      <a  th:each="ann:${annlist}" th:href="@{'/annDetails?announceid='+${ann.id}}"> 
+	                      <li th:text="${ann.title}"><span th:text="${#dates.format(ann.time, 'yyyy-MM-dd')}"></span></li>
+	                      </a>
 	                    </ul>
 	                   </div>
                     </div>
@@ -357,15 +338,15 @@
     </div>
 
     <!-- jQuery -->
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <script src="/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
+    <script src="/vendors/nprogress/nprogress.js"></script>
     
     <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
+    <script src="/build/js/custom.min.js"></script>
   </body>
 </html>

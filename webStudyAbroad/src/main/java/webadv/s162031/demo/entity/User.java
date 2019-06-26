@@ -7,7 +7,7 @@ import java.util.Date;
  * @author: yjp
  * @date:
  * @description:
- * 用户
+ * 鐢ㄦ埛
  */
 @Entity
 public class User {
@@ -27,7 +27,7 @@ public class User {
     private String email;
 
     /**
-     * 用户id，自增长
+     * 鐢ㄦ埛id锛岃嚜澧為暱
      * @return
      */
     @Id
@@ -42,7 +42,7 @@ public class User {
     }
 
     /**
-     * 用户账户
+     * 鐢ㄦ埛璐︽埛
      * @return
      */
     @Column(name = "useraccount")
@@ -55,10 +55,10 @@ public class User {
     }
 
     /**
-     * 用户密码
+     * 鐢ㄦ埛瀵嗙爜
      * @return
      */
-    @Column(name = "userpassword")
+    @Column(name = "userpassword",unique = true)
     public String getPassword() {
         return password;
     }
@@ -68,7 +68,7 @@ public class User {
     }
 
     /**
-     * 用户名字
+     * 鐢ㄦ埛鍚嶅瓧
      * @return
      */
     @Column(name = "username")
@@ -81,7 +81,7 @@ public class User {
     }
 
     /**
-     * 用户护照
+     * 鐢ㄦ埛鎶ょ収
      * @return
      */
     @Column(name = "passport")
@@ -94,7 +94,7 @@ public class User {
     }
 
     /**
-     * 出生年月
+     * 鍑虹敓骞存湀
      * @return
      */
     @Column(name = "birth")
@@ -108,7 +108,7 @@ public class User {
     }
 
     /**
-     * 用户邮箱
+     * 鐢ㄦ埛閭
      * @return
      */
     @Column(name = "email")
